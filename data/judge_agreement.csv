@@ -1,0 +1,2 @@
+judge_a,judge_b,shared,position_exact_agreement,position_mean_abs_diff,stance_agreement,framework_agreement
+judge-claude-opus-5-5-cli,judge-gpt-6-astra-cli,571,0.9140350877192982,0.043894736842105264,0.9982486865148862,1.0

@@ -1,0 +1,4 @@
+component,sd
+question (between-question SD),0.2073091364781057
+residual SD (model x question + run noise; one run),0.31378311595658503
+between-model SD (of adjusted stringency),0.05462356002230255
