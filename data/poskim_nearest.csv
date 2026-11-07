@@ -1,0 +1,14 @@
+model,model_name,nearest_authority,nearest_distance,nearest_n_questions,farthest_authority,farthest_distance,closest_relative_to_other_models,closest_relative_margin
+claude-fable-5-1-cli,Claude Fable 5.1,Shemiras Shabbos K'hilchasah,0.2222222222222222,9,OU,0.5,R. Shlomo Zalman Auerbach,0.16046153846153854
+claude-haiku-5-5-cli,Claude Haiku 5.5,R. Ovadia Yosef,0.4025,12,R. Shlomo Zalman Auerbach,0.6,Rambam,0.05769230769230771
+claude-opus-5-5-cli,Claude Opus 5.5,Mishnah Berurah,0.20696969696969697,33,Shulchan Aruch,0.4157425742574258,Rambam,0.1826923076923077
+claude-sonnet-5-5-cli,Claude Sonnet 5.5,R. Ovadia Yosef,0.32,12,Shemiras Shabbos K'hilchasah,0.5555555555555556,Rambam,0.05769230769230771
+gemini-3-8-flash-cli,Gemini 3.8 Flash,Shemiras Shabbos K'hilchasah,0.1111111111111111,9,Rambam,0.5625,Shemiras Shabbos K'hilchasah,0.17948717948717946
+gemini-4-argon-medium-cli,Gemini 4 Argon (medium),Mishnah Berurah,0.25242424242424244,33,Rambam,0.625,R. Shlomo Zalman Auerbach,0.13846153846153852
+gpt-5-6-sol-cli,GPT-5.6 Sol,Shemiras Shabbos K'hilchasah,0.2222222222222222,9,R. Shlomo Zalman Auerbach,0.578,R. Ovadia Yosef,0.08564102564102566
+gpt-6-1-sol-cli,GPT-6.1 Sol,Shemiras Shabbos K'hilchasah,0.16666666666666666,9,Rambam,0.5625,Shemiras Shabbos K'hilchasah,0.12393162393162391
+gpt-6-1-terra-cli,GPT-6.1 Terra,Shemiras Shabbos K'hilchasah,0.1111111111111111,9,Rambam,0.5625,OU,0.21153846153846156
+gpt-6-astra-cli,GPT-6 Astra,Mishnah Berurah,0.17696969696969697,33,R. Shlomo Zalman Auerbach,0.6113333333333333,Mishnah Berurah,0.1303263403263403
+gpt-6-luna-cli,GPT-6 Luna,Rambam,0.375,8,Shulchan Aruch,0.5131683168316832,Rambam,0.12019230769230771
+gpt-6-sol-cli,GPT-6 Sol,Shemiras Shabbos K'hilchasah,0.2222222222222222,9,Rambam,0.75,Rema,0.08543053960964408
+grok-4-7,Grok 4.7,Rambam,0.25,8,R. Shlomo Zalman Auerbach,0.578,Rambam,0.2451923076923077
