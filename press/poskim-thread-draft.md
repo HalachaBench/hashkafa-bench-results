@@ -3,7 +3,7 @@
 Standalone thread from @HalachaBench. Not a reply to anyone. Post after the "halacha vs personal values" thread is finished.
 
 ## 1 — attach charts/citations-radar.png
-Who do AI models cite when you ask them halacha?
+Who do AI models cite when asked halacha?
 
 Share of 288 answers naming Rav Moshe Feinstein: Gemini 33%, Claude 30%, Grok 14%. Every GPT model: 7% or less.
 
