@@ -1,6 +1,7 @@
-# X thread: poskim analysis (draft, 9 Nov 2026)
+# X thread: poskim analysis (posted 9 Nov 2026)
 
-Standalone thread from @HalachaBench. Not a reply to anyone. Post after the "halacha vs personal values" thread is finished.
+Posted as a standalone thread from @HalachaBench: https://x.com/HalachaBench/status/2119842194148430254
+Tweet ids: 2119842194148430254, 2119842198623568362, 2119842203300433966, 2119842208870441180, 2119842212880298416, 2119842216109920659.
 
 ## 1 — attach charts/citations-radar.png
 Who do AI models cite when asked halacha?
