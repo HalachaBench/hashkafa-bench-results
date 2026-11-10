@@ -45,12 +45,26 @@ The question bank and the individual answers are not published, to keep them out
 | Gemini 4 Argon (medium) | 0.51 | 0.46 – 0.55 |
 | Claude Haiku 5.5 | 0.50 | 0.46 – 0.54 |
 | GPT-6.1 Terra | 0.48 | 0.43 – 0.52 |
+| Claude Fable 5.2 * | 0.46 | 0.42 – 0.51 |
 | Claude Opus 5.5 | 0.46 | 0.42 – 0.50 |
 | Claude Fable 5.1 | 0.43 | 0.39 – 0.47 |
 | Claude Sonnet 5.5 | 0.43 | 0.38 – 0.47 |
 | GPT-6 Luna | 0.39 | 0.35 – 0.44 |
 
 Adjusted stringency from a mixed model (model + question), Opus judge. Full tables in [data/](data).
+
+\* **Added 9 November 2026:** Claude Fable 5.2 answered the same questions the same way (one answer each, Claude Code
+CLI, effort high, on Claude Code 2.1.290, which the API requires for it) and was graded by the same judge. It was added
+after the pre-registered comparisons, so it is exploratory: it is not in the lab averages, the charts above or the
+comparisons below. It answered 304 questions, one fewer than the others, because a duplicate question was retired after
+the first report; its interval is the model's mean ± the same margin as the other models in this balanced design.
+
+![Claude Fable 5.2 next to Fable 5.1 and the GPT average, by area](charts/fable52-vs-fable51.png)
+
+Fable 5.2 rules a little stricter than Fable 5.1 overall (0.46 against 0.43; the difference is not tested), most on
+Shabbat and Yom Tov (0.07 each), and more leniently on tefillah. It stays on the lenient side: only GPT-6 Luna, Claude
+Sonnet 5.5 and Claude Fable 5.1 are lower. Per-category numbers for every model, Fable 5.2 included:
+[data/fable52_stringency_by_category.csv](data/fable52_stringency_by_category.csv).
 
 **What the pre-selected comparisons show**
 
