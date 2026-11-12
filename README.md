@@ -175,6 +175,45 @@ would also be translation-mediated, which would measure the translator's style.
 
 Code: `hashkafa/poskim.py` and `hashkafa/poskim_text.py` in the (private) harness repository.
 
+## Sephardi asker (added 12 November 2026)
+
+The same 13 models answered the question bank a second time with one line of the prompt changed: "The person asking is
+Sephardi. Where Ashkenazi and Sephardi practice differ, rule for Sephardi practice." Both runs use the newer
+yes / in-between / no rubrics (one rubric per question; 0 = the lenient answer, 0.5 = in between, 1 = the stringent
+answer), drafted by Claude Opus 5.5 with web search and Sefaria and not yet reviewed, so this is a separate,
+exploratory comparison: the Ashkenazi baseline here is a fresh run on the full bank with those rubrics, not the
+pre-registered results above. The two runs share 532 scored questions; the three Ashkenazi-only controls (rice on
+Pesach, egg matzah, lox and cream cheese) were dropped from the Sephardi run. Judge: Claude Opus 5.5, told the asker is
+Sephardi. 168 of 169 Sephardi control answers were correct. Contrasts are paired by question, with bootstrap intervals
+and Holm correction.
+
+![Same questions, same models, asker changed](charts/sephardi-overlay-radar.png)
+
+- **The Sephardi asker gets more lenient rulings overall:** mean stringency 0.064 lower (95% CI 0.045 to 0.083). More
+  lenient on 239 questions, stricter on 128, the same on 165.
+- **The shift is confined to ritual law:** Shabbat -0.13, Yom Tov -0.13, fasts and aveilut -0.13, kashrut -0.12, all
+  significant. Tefillah, business and bein adam lachavero: no change.
+- **Every lab shifts** (Gemini -0.09, GPT -0.07, Grok -0.06, Claude -0.04). Claude Opus 5.5 and Sonnet 5.5 do not
+  shift significantly; GPT-5.6 Sol, Gemini 3.8 Flash, Gemini 4 Argon, GPT-6 Astra and Claude Haiku 5.5 shift most
+  (-0.08 to -0.09). With the Ashkenazi asker Claude is more lenient than GPT; with the Sephardi asker the two are
+  indistinguishable.
+- **Largest moves:** one set of glass dishes for meat and dairy, waiting after hard cheese, kitniyot and wet wipes on
+  Shabbat go lenient; glatt-only beef, bishul akum when a Jew lit the flame, kiddush over whiskey and Rabbeinu Tam
+  tefillin go strict. `data/sephardi/biggest_movers.csv`.
+- **Tradition.** The judge labelled which practice each ruling follows. With the Sephardi asker, Claude Fable 5.1's
+  rulings read as Sephardi in 95% of answers, Grok 4.7 and Gemini 3.8 Flash in 90%, GPT-6 Astra 88%; GPT-6 Luna 36%,
+  GPT-6 Sol 38% and GPT-6.1 Terra 45%, the rest mixed or unclear. `data/sephardi/tradition_labels.csv`.
+- **Citations.** With the Ashkenazi asker the Rema and Mishnah Berurah lead. With the Sephardi asker R. Ovadia Yosef
+  is named in 73% of Claude answers, 75% of Gemini, 40% of Grok and 16% of GPT, and the Mechaber rises (Gemini 42%).
+  These counts use the full 532-question bank, so they differ from the 288-question counts in the poskim section
+  above. `data/sephardi/citations_by_model.csv`.
+
+![Which authorities do the answers cite, Ashkenazi asker vs Sephardi asker](charts/sephardi-citation-radar.png)
+
+![Sephardi asker, average stringency by lab and category](charts/sephardi-labs-radar.png)
+
+More charts: `charts/sephardi-by-category.png`, `charts/sephardi-by-model.png`, `charts/sephardi-tradition.png`.
+
 ## Files
 
 - `data/per_model_summary.csv`: per-model stringency, rates of ruling, deferring to a rabbi, refusals, control accuracy.
@@ -189,6 +228,12 @@ Code: `hashkafa/poskim.py` and `hashkafa/poskim_text.py` in the (private) harnes
 - `data/citations_by_model.csv`, `data/citation_shares_by_model.csv`, `data/citations_ca.csv`: which authorities
   each model names in its answers, and the correspondence-analysis coordinates.
 - `data/style_delta.csv`: Burrows's Delta between every pair of models.
+- `data/sephardi/`: the Sephardi-asker comparison. `by_model.csv`, `by_vendor.csv`, `by_category.csv`, `overall.json`,
+  `vendor_gaps_by_asker.csv`, `vendor_shift_differences.csv`: paired Sephardi-minus-Ashkenazi shifts with intervals and
+  corrected p-values; `biggest_movers.csv`: the questions that moved most; `tradition_labels.csv`: which practice each
+  model's rulings follow; `citations_by_model.csv`, `citations_by_vendor.csv`: authorities named, both askers;
+  `stringency_by_category.csv`, `per_model_summary.csv`: the Sephardi run; `ashkenazi_yesno_stringency_by_category.csv`:
+  the Ashkenazi run on the same rubrics.
 - `charts/`: the charts above and one radar per model.
 
 ## Limits
